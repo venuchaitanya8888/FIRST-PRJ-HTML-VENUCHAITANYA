@@ -1,0 +1,73 @@
+.description{
+    background-color:yellow;
+    color:white
+}
+.para{
+    border:2px solid red;
+}
+h1{
+    background-color: rgb(253, 254, 254);
+    margin:50px 20px 60px;
+    color:black;
+    
+}
+p{
+    background-color: white;
+    color:rgb(195, 2, 34);
+    margin:50px 20px;
+}
+.heading1{
+    display:inline;
+    font-size: 15px;
+}
+.heading2{
+    display: inline;
+    font-size:29px;
+}
+/*even buttons are inline */
+.primary-text{
+    background-color: darkmagenta;
+    display:inline-block    /*This is th solution we're looking for */
+}
+.secondary-text{
+    background-color: darkred;
+    display:inline-block; /*This is th solution we're looking for */
+    /*width:10000px; since It will not bring any change*/
+
+    /*can't keep display as block, in that case they will just come next to each other & can't keep display as inline, 
+becoz not able to change the widht*/
+ 
+
+    width:200px;
+    height:200px;
+    /*Problem solved*/
+}
+/*After writing code for the part of "solution of the probkem", I found that both, Pri & Sec came in horizontal*/
+
+
+/*Solution is to "DISPLAY INLINE BLOCK"   */
+
+.sizing-content-example{
+    width:200px;
+    height:150px;
+    background-color:yellow;
+    border:2px solid red
+
+
+}
+
+
+
+
+
+
+
+/* ADVANCE CSS*/
+
+
+
+
+
+
+
+

@@ -1,0 +1,201 @@
+
+
+/*Banner*/
+.main-banner{
+    background-image:url('./../images/IMG_20211205_202600.jpg');
+    /*background-image will have size as much of content*/
+    width: 500px;   /*to the container*/
+    /*width: 98% ; */
+    height: 370px;
+    /*the bgm image is in our control not the above two, ht and wd*/
+    background-size: 100% auto; /*contain, cover*/
+    /* we try and maintain the aspect ratio that we have*/
+    /* so if ht becomes half, width will also be half*/
+    /*this auto calculates size of ht and wd*/ 
+    /* background-size:*100px 200px;    */
+    /*explicitly giving size, and if size given is smaller 
+    /*than container then images will start repeating themselves*/
+    /*so we will do...*/
+    background-repeat: no-repeat; 
+    background-color:yellow;
+    background-position: 50px 50px;
+    /* shift 50p px from top and 50 px from left  */
+    /* or shift 50 px to x-axis and not in y-axis*/
+
+}
+
+
+/*Offerings*/
+
+.price-container{
+    display: flex; /*all 3 in same line*/
+    background-color: yellow;
+    /*justify-content: space-between 3 went apart as much as possible, extra space is in b/w boxes*/
+    justify-content: space-around; /*alling contents in main axis, i.e. hrz axis*/
+    margin: auto;
+    margin-top: 20px;
+    
+    flex-wrap:wrap; /*don't want to be in same line for new divs*/
+    flex-direction: row; /*make this row to column*/ 
+                             /* try to fill in horz line, bydefault*/
+                            /*row-reverse will do*/
+                            /*flex-direction: column is for mobile view*/
+
+    /* align-itmes: flex-start                        
+                                /*the particular item card3 occupying max space and rest are also stretched to fill the complete gap*/
+                                /*but after align-items, then 1st & 2nd card are not stretched to fill the gap now and align to start */ 
+                                /*max will be occupied by max card size but rest will align accordingly unless a specific height is mentioned
+    */
+                                       
+    height: 400px; /*3 will strech to fill gap vertically, for flex-start*/
+                   /*for flex-start they'll stretch at starting vertically*/
+                   /*for flex-center they'll stretch at center vertically*/
+                   /*forflex-drct: column, height will height of content and element will be stuck to each other, and in the case margin will be provided*/
+
+    align-content: space-between; /*like justfy-content*/
+    /*align-content: flex-end, will work in opposite for flex-drct columnn , i.e. horz direction, then two columns align themselves at center*/
+    background-color: #FCC8D1;
+
+    }
+.offering-heading {
+text-align: center;
+text-shadow: 0px 0px 1px/*just like bluriness,*/ red, 0px 0px 3px yellow;
+         /*the first one is horz offset, depicting shadow position*/
+        /*making zeroes to these values will make shadow at back of text*/
+        /*color is optional*/
+}    
+
+
+
+
+.price-card {
+    /*width: 30% /* div will allign accordingly to this percent*/
+     /*each 3 div will be given 30%, as complete is 100% */
+     width:150px;
+     height:150px;
+    /*border: 1px solid gray;   */
+    text-align:center;
+    /*border: border-width border-style border-color*/
+    /*border: 2px solid green; thickness of lines*/
+   
+   
+    border-width: 0px;
+    border-style: solid; /*click ctrl+space to get more style*/
+    border-color: aquamarine;
+    /*border-radius: 12px */
+    /*border-radius: 50% 10%   /* x and y axis for diff %*/
+    border-top-left-radius:30px;
+    border-top-right-radius:30px;
+    /* similarly for right and bottom*/
+    
+    
+    /*border-top:3px solid red;
+    border-bottom: 5px solid red;
+    border-left: 3px solid red;
+    border-right:5px solid red;
+    text-align:center;*/
+
+
+    /*BOX-SHADOWS*/
+    box-shadow:2px 4px; /*right and bottom respectively*/
+    /* BOX-SHADOWS at left and top by putting '-'signs besides*/
+    /*box-shadow:-2px -4px;  */
+    /* these are called 'h' of set, for right and bottom*/
+    /*and 'v' of set, for left and top respectively*/
+
+
+    /*now we want it to be blur*/
+    box-shadow:2px 4px 10px;
+    /* this 10px is the blurriness of radius*/
+
+    /*to increase/decrease size of shadow we use 'spread'*/
+    /*box-shadow: 2px 4px 4px -2px;   here it will decrease by 2px*/
+    /*box-shadow: 2px 4px 4px 2px;    here it will increase by 2px*/
+     
+    /*by default border gets color as of text*/
+    /* box-shadow: 1px 2px 4px lightseagreen; */
+
+    /*box-shadowa in all the 4 sides*/
+    box-shadow: 1px 2px 2px lightgray, -1px 0px 0px lightgray;
+
+    /*now we want proper shadow instead of card-lie-effect*/
+    /*where it looks like card, and shadow is on back*/
+    /*for that remove blurrines*/
+    box-shadow: 5px 10px blue inset, -1px -1px 2px lightgray inset;
+    /* based on UI/UX*/
+
+    /*now it opposite inset*/
+    box-shadow:2px 2px 2px lightgray insert, -2px -2px 2px ligh /*shadow is coming in inner corners, visualtion in depth, down, and can have multiple shadows*/;
+
+
+
+    /*TEXT-SHADOW & its prop*/
+    /*by default, this is zero as we see text with no shadow*/
+    /*radius is optional*/
+
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #d9ecf2
+
+}
+
+
+.card-heading{
+    color:blue
+}
+.card-description{
+    /*font-size:15px;*/ /*advance CSS CHAPTER 1st Topic:6*/
+    font-size:12 px;
+    letter-spacing: 0.6px; 
+
+
+
+}
+.card-cta{
+    width:70px;
+    height: 50px;
+    border:0px;
+    background-color: #ff219f;
+    color:white;
+    border-radius:5px;
+    letter-spacing: 1px;
+    font-size:15px;
+    margin-bottom:16px ;
+    box-shadow:2px 2px 4px lightgray;
+    cursor:pointer;
+    outline:0;
+    transition:transform 1s;
+}
+/*adding-interaction*/
+.card-cta:hover{
+    background-color: #8f024f;
+
+}
+.card-cta:active {
+    transform: scale(1.05 1.05); /*on clicking its size suddenly expands a bit*/
+}
+
+.price-amount{
+    font-style:normal;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight:lighter;
+    text-decoration-line:overline;
+    text-decoration-style:solid;
+    text-decoration-color:red;
+    /*text-decoration:line-through solid red;    */
+
+
+}
+.new-card{
+    width:150px;
+     height:150px;
+     margin:auto;
+     background-color: aquamarine;
+     border-radius: 50px/10px;     /* we don't need border for a border radius*/
+     text-align:center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+
+
+
